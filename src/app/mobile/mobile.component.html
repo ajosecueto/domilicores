@@ -1,0 +1,9 @@
+<mat-form-field style="margin: 20px;">
+  <mat-select placeholder="Ciudad">
+    <mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<select class="form-control" style="margin: 20px; width: 180px;">
+  <option *ngFor="let city of cities" [value]="city.id">{{city.id + ' - ' + city.name}}</option>
+</select>
