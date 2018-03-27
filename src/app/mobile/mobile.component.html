@@ -1,9 +1,32 @@
-<mat-form-field style="margin: 20px;">
-  <mat-select placeholder="Ciudad">
-    <mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>
-  </mat-select>
-</mat-form-field>
+<!--<mat-form-field style="margin: 20px;">-->
+<!--<mat-select placeholder="Ciudad">-->
+<!--<mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>-->
+<!--</mat-select>-->
+<!--</mat-form-field>-->
 
-<select class="form-control" style="margin: 20px; width: 180px;">
-  <option *ngFor="let city of cities" [value]="city.id">{{city.id + ' - ' + city.name}}</option>
-</select>
+<table class="table">
+  <thead>
+  <tr>
+    <th></th>
+    <th>
+      <mat-form-field>
+        <input matInput placeholder="BUSCAR">
+      </mat-form-field>
+    </th>
+  </tr>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">CEDULA</th>
+    <th scope="col">NOMBRE</th>
+    <th scope="col">APELLIDO</th>
+    <th scope="col">TELEFONO 1</th>
+    <th scope="col">TELEFONO 2</th>
+    <th scope="col">DIRECCION</th>
+    <th scope="col">CIUDAD</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  </tr>
+  </tbody>
+</table>

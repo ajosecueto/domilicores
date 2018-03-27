@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {server_url} from '../../utils/server';
-import {UMessage} from '../../general/interfaces';
+import {MessageU} from '../../general/general';
 
 @Injectable()
 export class LoginService {
@@ -133,7 +133,7 @@ export class LoginService {
   changePassword(form: any) {
     form['username'] = LoginService.userSession();
     form['token'] = LoginService.tokenSession();
-    return this.http.post<UMessage<string>>(server_url + 'login/change_password/', form, {responseType: 'json'});
+    return this.http.post<MessageU<string>>(server_url + 'login/change_password/', form, {responseType: 'json'});
   }
 
   /**

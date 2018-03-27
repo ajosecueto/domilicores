@@ -12,6 +12,11 @@ import {GeneralService} from './general/general.service';
 import {LoginComponent} from './login/login.component';
 import {YesnoComponent} from './utils/yesno/yesno.component';
 import {EmailMenuComponent} from './utils/email-menu/email-menu.component';
+import {LoginService} from './login/services/login.service';
+import {MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule} from '@angular/material';
+import {RouterModule, Routes} from '@angular/router';
+
+const routes: Routes = [];
 
 
 @NgModule({
@@ -28,9 +33,14 @@ import {EmailMenuComponent} from './utils/email-menu/email-menu.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    RouterModule.forRoot(routes),
+    MatSelectModule,
+    MatInputModule,
+    MatCardModule,
+    MatSnackBarModule,
+    MatButtonModule
   ],
-  providers: [GeneralService],
+  providers: [GeneralService, LoginService],
   entryComponents: [],
   bootstrap: [AppComponent]
 })
