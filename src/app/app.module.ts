@@ -13,8 +13,9 @@ import {LoginComponent} from './login/login.component';
 import {YesnoComponent} from './utils/yesno/yesno.component';
 import {EmailMenuComponent} from './utils/email-menu/email-menu.component';
 import {LoginService} from './login/services/login.service';
-import {MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSnackBarModule} from '@angular/material';
 import {RouterModule, Routes} from '@angular/router';
+import {MobileService} from './mobile/services/mobile.service';
 
 const routes: Routes = [];
 
@@ -38,9 +39,10 @@ const routes: Routes = [];
     MatInputModule,
     MatCardModule,
     MatSnackBarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
-  providers: [GeneralService, LoginService],
+  providers: [GeneralService, LoginService, MobileService],
   entryComponents: [],
   bootstrap: [AppComponent]
 })

@@ -1,11 +1,17 @@
+import {City} from '../../general/general';
+
 export interface Mobile {
   id: number;
-  nombre: string;
-  apellido: string;
-  cedula: string;
-  telefono1: string;
-  telefono2: string;
-  direccion: string;
-  ciudad: string;
+  names: string;
+  last_names: string;
+  identification: string;
+  phone1: string;
+  phone2: string;
+  address: string;
+  city: City;
+  priority: number;
+  vehicle_type: string;
+  vehicle_ide: string;
+  picture: string;
 
 }

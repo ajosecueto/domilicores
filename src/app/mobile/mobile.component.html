@@ -10,7 +10,7 @@
     <th></th>
     <th>
       <mat-form-field>
-        <input matInput placeholder="BUSCAR">
+        <input matInput placeholder="BUSCAR" [(ngModel)]="find">
       </mat-form-field>
     </th>
   </tr>
@@ -26,7 +26,38 @@
   </tr>
   </thead>
   <tbody>
-  <tr>
+  <tr *ngFor="let mobile of mobiles">
+    <td>
+      <button mat-icon-button color="accent">
+        <mat-icon aria-label="EDIT">edit</mat-icon>
+      </button>
+      <button mat-icon-button color="accent">
+        <mat-icon aria-label="DELETE">delete</mat-icon>
+      </button>
+    </td>
+    <td>
+      {{mobile.identification}}
+    </td>
+    <td>
+      {{mobile.names}}
+    </td>
+    <td>
+      {{mobile.last_names}}
+    </td>
+    <td>
+      {{mobile.phone1}}
+    </td>
+    <td>
+      {{mobile.phone2}}
+    </td>
+    <td>
+      {{mobile.address}}
+    </td>
+    <td>
+      {{mobile.city.name}}
+    </td>
+
+
   </tr>
   </tbody>
 </table>
