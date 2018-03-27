@@ -1,0 +1,27 @@
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="onClick(form.value)">
+    <!-- [@popOverState]="stateName" -->
+    <div class="headerDiv">
+      <!--<img src="../../assets/icon.png" height="128" width="128"/>-->
+    </div>
+    <div class="input">
+      <!--    <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Usuario" name="usuario" formControlName="usuario">
+          </mat-form-field>-->
+      <input class="form-control" type="text" placeholder="Usuario" name="usuario" formControlName="usuario">
+    </div>
+    <div class="input">
+      <!--    <mat-form-field class="example-full-width">
+            <input matInput type="password" placeholder="Contraseña" name="password" formControlName="password">
+          </mat-form-field>-->
+      <input class="form-control" style="margin-top: 10px;" type="password" placeholder="Contraseña" name="password"
+             formControlName="password">
+    </div>
+    <div class="input" style="margin-top: 10px;">
+      <button mat-raised-button color="accent" type="submit">Iniciar Sesion</button>
+    </div>
+  </form>
+</mat-card>
+
+
+

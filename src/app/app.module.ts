@@ -7,13 +7,19 @@ import {MatSelectModule} from '@angular/material/select';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MobileComponent } from './mobile/mobile.component';
+import {MobileComponent} from './mobile/mobile.component';
 import {GeneralService} from './general/general.service';
+import {LoginComponent} from './login/login.component';
+import {YesnoComponent} from './utils/yesno/yesno.component';
+import {EmailMenuComponent} from './utils/email-menu/email-menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    YesnoComponent,
+    EmailMenuComponent,
     MobileComponent
   ],
   imports: [
